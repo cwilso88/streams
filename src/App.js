@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import StreamCreate from './components/streams/StreamCreate';
 import StreamEdit from './components/streams/StreamEdit';
 import StreamDelete from './components/streams/StreamDelete';
