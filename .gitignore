@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+#files
+/.GoogleAuth.js
+
 # production
 /build
 
