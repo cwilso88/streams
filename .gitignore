@@ -9,6 +9,10 @@
 /coverage
 
 #files
+/.GoogleAuth.js
+/api
+/src/components/api/GoogleAuth.js
+/src/components/api/GoogleAuth
 /src/components/api
 
 # production
