@@ -5,7 +5,8 @@ class StreamCreate extends Component {
     render() {
         return (
             <form>
-                <Field />
+                <Field name="title"/>
+                <Field name="description"/>
             </form>
         )
     }
