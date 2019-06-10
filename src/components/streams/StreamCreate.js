@@ -11,5 +11,7 @@ class StreamCreate extends Component {
     }
 }
 
-export default StreamCreate;
+export default reduxForm({
+    form: 'streamCreate'
+})(StreamCreate);
 
