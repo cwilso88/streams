@@ -51,3 +51,12 @@ export const fetchStream = id => async dispatch => {
     });
 }
 
+export const editStream = id => async dispatch => {
+    const response = await streams.put(`/streams/${id}`);
+
+    dispatch({
+        type: EDIT_STREAM,
+        payload: response.data
+    });
+}
+
