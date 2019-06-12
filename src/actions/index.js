@@ -1,5 +1,6 @@
-import streams from '../apis/streams';
+import streams from '../components/api/streams';
 import { SIGN_IN, SIGN_OUT } from './types';
+import { async } from 'q';
 
 
 
@@ -15,6 +16,8 @@ export const signOut = () => {
     }
 }
 
-export const createStream = formValues => asyc dispatch => {
-    streams.post('/streams', formValues);
+export const createStream = formValues => {
+    return(dispatch) => {
+         streams.post('/streams', formValues)
+    };
 };
