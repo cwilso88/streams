@@ -4,7 +4,6 @@ import { SIGN_IN,
         CREATE_STREAM,
         FETCH_STREAMS,
         FETCH_STREAM,
-        UPDATE_STREAM,
         DELETE_STREAM,
         EDIT_STREAM } from './types';
 
@@ -56,6 +55,15 @@ export const editStream = id => async dispatch => {
 
     dispatch({
         type: EDIT_STREAM,
+        payload: response.data
+    });
+}
+
+export const deleteStream = id => async dispatch => {
+    const response = await streams.delete(`/streams/${id}`);
+
+    dispatch({
+        type: DELETE_STREAM,
         payload: response.data
     });
 }
