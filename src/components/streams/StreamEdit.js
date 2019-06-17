@@ -10,7 +10,7 @@ const StreamEdit = (props) => {
 };
 
 const mapStateToProps = (state, ownProps) => {
-    return { stream:  };
+    return { stream: state.streams[ownProps.match.params.id] };
 };
 
 export default connect(
