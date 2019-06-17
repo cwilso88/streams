@@ -8,6 +8,12 @@ class StreamList extends React.Component {
         this.props.fetchStreams();
     }
 
+    renderAdmin(stream) {
+        if (stream.userId === this.props.currentUserId){
+            return <div>Edit/delete</div>
+        }
+    }
+
     renderList() {
         return this.props.streams.map(stream => {
             return (
