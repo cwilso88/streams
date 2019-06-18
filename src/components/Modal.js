@@ -6,10 +6,10 @@ const Modal = props => {
         <div className="ui dimmer modals visible active">
             <div className="ui standard modal visible active">
                 Hey Ima modal!
-            </div>
-            
-        </div>
-    )
-}
+            </div>  
+        </div>,
+        document.querySelector('#modal')
+    );
+};
 
-export default Modal
+export default Modal;
