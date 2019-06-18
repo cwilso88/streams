@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import history from '../history';
 
 const Modal = props => {
     return ReactDOM.createPortal(
-        <div onClick={() => history.push('/')} className="ui dimmer modals visible active">
-            <div  onClick={(e) => e.stopPropagation()} className="ui standard modal visible active">
+        <div onClick={props.onDismiss} className="ui dimmer modals visible active">
+            <div  onClick={props.stopPropogation} className="ui standard modal visible active">
                 <div className="header">
                     {props.header}
                 </div>
@@ -13,12 +12,7 @@ const Modal = props => {
                     {props.content}
                 </div>
                 <div className="actions">
-                    <button className="ui button">
-                        Cancel
-                    </button>
-                    <button className="ui button negative">
-                        Delete
-                    </button>
+                    {props.actions}
                 </div>
             </div>  
         </div>,
