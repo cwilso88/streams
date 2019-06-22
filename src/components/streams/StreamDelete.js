@@ -18,6 +18,14 @@ class StreamDelete extends React.Component {
             </React.Fragment>
         );
     }
+
+    renderContent() {
+        if(!this.props.stream) {
+            return 'Are you sure you want to delete this stream?'
+        }
+
+        return `Are you sure you want to delete the stream with title: ${this.props.stream.title}`
+    }
     
     render() {
         return (
@@ -25,7 +33,7 @@ class StreamDelete extends React.Component {
                 StreamDelete
                 <Modal 
                     header="Delete Stream"
-                    content="Are you sure you want to delete this stream?"
+                    content={this.renderContent()}
                     actions={this.renderActions()}
                     onDismiss={() => history.push('/')}
                     stopPropogation={(e) => e.stopPropagation()}
