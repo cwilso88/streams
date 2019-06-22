@@ -29,8 +29,6 @@ class StreamDelete extends React.Component {
     
     render() {
         return (
-            <div>
-                StreamDelete
                 <Modal 
                     header="Delete Stream"
                     content={this.renderContent()}
@@ -38,7 +36,6 @@ class StreamDelete extends React.Component {
                     onDismiss={() => history.push('/')}
                     stopPropogation={(e) => e.stopPropagation()}
                 />
-            </div>
         );
     };
 };
