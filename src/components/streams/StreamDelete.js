@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { fetchStream } from '../../actions';
 import Modal from '../Modal';
 import history from '../../history';
+import deleteStream from '../../actions';
 
 
 class StreamDelete extends React.Component {
@@ -12,10 +13,12 @@ class StreamDelete extends React.Component {
     } 
 
     renderActions() {
+        const id = this.props.match.params.id;
+
         return (
             <React.Fragment>
                 <Link to="/" className="ui button">Cancel</Link>
-                <button className="ui button negative">Delete</button>
+                <button onClick={() => this.props.deleteStream(id)} className="ui button negative">Delete</button>
             </React.Fragment>
         );
     }
